@@ -1,0 +1,28 @@
+@import "./font.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+      /* Colors */
+      --c-blue-100: #318FE7;
+      --c-blue-200: #549FD2;
+
+      --c-black-: #000000;
+      --c-black-100: #1E1E1E;
+
+      --c-gray-100: #E2E2E2;
+      --c-gray-200: #C4C4C4;
+      --c-gray-300: #CFCFCF;
+      --c-gray-400: #989898;
+      --c-gray-500: #6A6A6A;
+      --c-gray-600: #505050;
+      --c-gray-700: #4E4E4E;
+
+      --c-white: #FFFFFF;
+      --c-white-100: #F1F1F1;
+}
+
+body {
+      @apply bg-gray-1 p-0 m-0 w-full h-screen
+}
