@@ -3,6 +3,7 @@
 ## Installing
 
 To install the application, you have to run the following command:
+
 ```
 npm install
 ```
@@ -15,6 +16,7 @@ VITE_MOVIE_DB_API_URL=https://api.themoviedb.org/
 ```
 
 ## Running
+
 ### With compiles and hot-reloads for development
 
 ```
