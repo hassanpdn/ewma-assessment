@@ -1,16 +1,15 @@
-import axios from 'axios';
-import { MOVIE_DB_API_URL, MOVIE_DB_API_KEY } from '@/constants.js';
 
-const apiClient = axios.create({
-      timeout: 5000,
-      baseURL: MOVIE_DB_API_URL,
-      params: {
-            'api_key': MOVIE_DB_API_KEY
-      }
-});
+import { apiClient } from "./config";
+import { useLoaderStore } from '@/store/loader.js';
+import { storeToRefs } from 'pinia'
 
 apiClient.interceptors.request.use(
       (config) => {
+            // Handle loading
+            const loadingInfo = useLoaderStore();
+            const { isLoading } = storeToRefs(loadingInfo);
+            isLoading.value = true;
+
             return config;
       },
       (error) => {
